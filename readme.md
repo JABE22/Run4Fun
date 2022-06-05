@@ -28,27 +28,58 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
-### Project pages
+### Project visitor and customer pages
 
 **Home**
+
 ![alt home](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Home.JPG)
+
 **Upcoming events**
+
 ![alt upcome](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Upcome.JPG)
+
 **Past events**
+
 ![alt past](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Past.JPG)
+
 **Search events**
+
 ![alt search](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Search.JPG)
+
 **About**
+
 ![alt about](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/About.JPG)
+
 **Contact**
+
 ![alt contact](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Contact.JPG)
+
 **Events on drill down map**
+
 ![alt map](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Map.JPG)
+
 **Upcoming events**
+
 ![alt enote_upper](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Enote.JPG)
 ![alt enote_lower](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Enote2.JPG)
+
 **Login to page**
+
 ![alt login](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Login.JPG)
+
+### Project admin pages
+
 **Admin home (django built-in)**
+
 ![alt admin_home](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_home.JPG)
+
+**Admin home (django built-in)**
+
 ![alt admin_results](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_results.JPG)
+
+**Admin home (django built-in)**
+
+![alt admin_upload-csv](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_upload-csv.JPG)
+
+
+### Database design

@@ -1,4 +1,3 @@
-from unicodedata import name
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from events.models import Event, Competitor, Race, Result, Contact

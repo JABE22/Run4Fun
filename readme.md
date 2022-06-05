@@ -41,7 +41,7 @@ Web application is developed using Python conda (4.13.0)
 
 **Home**
 
-Home page consist of motivation picture gallery with changing images fading (opacity) effect and stylized phrase text. It's only informative page without clickable components.
+Home page consist of motivation picture gallery with changing images using fading (opacity) effect, and stylized phrase text. It's only informative page without clickable components.
 
 ![alt home](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Home.JPG)
 

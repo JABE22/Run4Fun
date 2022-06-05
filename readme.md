@@ -5,8 +5,8 @@
 
 Date of completion for evaluation: 10.6.2022
 
-For site business idea and user interface, read more here https://github.com/JABE22/jabe22.github.io
-Project demo Published in https://jabe22.github.io/ResultService/home.html
+- For site business idea and user interface, read more here https://github.com/JABE22/jabe22.github.io
+- Project demo Published in https://jabe22.github.io/ResultService/home.html
 
 **Notes:** 
 * Style design (site responsiveness etc.) are not considered here. Please, visit links above.

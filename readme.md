@@ -37,7 +37,7 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
-### Project visitor and customer pages
+### Website visitor and customer pages
 
 **Home**
 

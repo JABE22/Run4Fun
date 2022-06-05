@@ -42,7 +42,7 @@ Web application is developed using Python conda (4.13.0)
 
 ![alt past](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Past.JPG)
 
-**Past events**
+**Past events (opened event result list)**
 
 ![alt past_open](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Past2.JPG)
 

@@ -18,7 +18,7 @@ Date of completion for evaluation: 10.6.2022
 
 In this repository, front-end project files from the repository above are integrated to django framework. Also, this project extends demo site by inserting database solution and other django built-in functionalities
 
-**Django built-in functionality used**
+**Django built-in functionalities used**
 - Database management for admin
 - CSV file upload to add data into the database via admin panel
 - Models and views to insert data via web site forms (contact and event notification)

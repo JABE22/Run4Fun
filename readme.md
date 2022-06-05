@@ -15,6 +15,6 @@ In this repository, front-end project files from the repository above are integr
 - Models and views to insert data via web site forms (contact and event notification)
 - User authentication (login, logout) to get access to hidden content of the site
 
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fbmu-verlag.de%2Fmodel-view-controller-mvc-softwareentwicklungsmuster%2F&psig=AOvVaw3_EOiraFdjubmccOAJckBN&ust=1654517193468000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLCx3JWjlvgCFQAAAAAdAAAAABAD)
+![alt text](https://bmu-verlag.de/wp-content/uploads/image1-6.png)
 
 ### 

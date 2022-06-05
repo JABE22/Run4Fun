@@ -30,3 +30,4 @@ Web application is developed using Python conda (4.13.0)
 
 ### Project pages
 
+![alt home](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Home.JPG)

@@ -109,11 +109,6 @@
 <script src="{% static 'js/formevent.js' %}"></script>
 <script src="{% static 'js/datalist.js' %}"></script>
 <!-- User identification required content ends here -->
-{% else %}
-<!-- Login suggested if user tries to navigate /enote -->
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a>
-<!-- End of login -->
 {% endif %}
 <!-- End of the content block -->
 {% endblock content %}

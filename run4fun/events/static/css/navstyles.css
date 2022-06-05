@@ -1,0 +1,48 @@
+/* NAVIGATION BAR styles: Everything under "topnav" class, nothing else */
+
+.topnav {
+    overflow: hidden;
+    width: 70%;
+}
+
+.topnav a:not(.icon) {
+    float: left;
+    display: block;
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 14px;
+    /* Notice: This is dependent with .icon padding (2px) */
+    text-decoration: none;
+    font-size: var(--navbar-font-size);
+    min-width: 60px;
+}
+
+.topnav a:hover {
+    background-color: var(--main-text-color);
+    color: var(--main-site-color);
+}
+
+.topnav a.active:not(.icon) {
+    background-color: var(--main-site-color);
+    color: var(--main-text-color);
+}
+
+.topnav .icon.active {
+    background-color: transparent;
+}
+
+.topnav .icon {
+    display: none;
+    float: left;
+    color: var(--main-text-color);
+    padding: 16px;
+    background-color: transparent;
+}
+
+.topnav a.admin_menu {
+    color: var(--site-subcolor-third);
+}
+
+.topnav a.admin_menu.active {
+    color: var(--site-subcolor-third);
+}

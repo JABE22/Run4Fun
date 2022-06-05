@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for upcome -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+
+<!-- Local Javascript file imports (not page content sensitive) -->
+<script src="{% static 'js/data.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container">
+    <h2 class="page_name">-Upcoming events-</h2>
+</div>
+
+<!-- Page content: 4. Grid row elements - Place for responsive upcoming event boxes (Constructed in JS-file) -->
+<div id="eventcontainer"></div>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp ">
+    <p><a class="btn btn-primary " href="# " role="button " style="color:goldenrod">Back to Top &raquo;</a></p>
+</div>
+
+<!-- Script for JSON data import (page specific) -->
+<script>
+    (async() => {
+        //const upevents = await getJSON("{% static 'js/data/up_events.json' %}");
+        //constructUpcomingEvents('eventcontainer', upevents);
+        const events = await getJSON("http://127.0.0.1:8000/events");
+        constructDjangoEvents('eventcontainer', events);
+    })();
+</script>
+
+{% endblock content %}

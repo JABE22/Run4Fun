@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Documentation of Interactive Trial Map</title>
+  <link rel="stylesheet" href="ess-files/screen.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="ess-files/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="ess-files/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+  <script src="ess-files/AC_RunActiveContent.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="center"><small>Documentation of<br></small>&ldquo;Interactive Trial Map&rdquo;</h1>
+
+    <hr><h2 id="up" class="alt">Table of Contents</h2>
+    <ol class="alpha">
+      <li><a href="#overview">General overview</a></li>
+      <li><a href="#installation">Installation in a standard website</a></li>
+      <li><a href="#wp">Installation in a WordPress website</a></li>
+      <li><a href="#customization">Map Customization</a></li>
+      <li><a href="#pins">How to add/remove and modify pins?</a></li>
+      <li><a href="#xy">How to get the X, Y coordinates?</a></li>
+    </ol>
+
+
+    <h2 id="up" class="alt">FAQ</h2>
+    <p>For frequently asked questions or common issues and possible solutions, please check this updated <a href="https://www.html5interactivemaps.com/assets/knowledge-base/index.html">page</a>.</p>
+
+
+    <hr><h3 id="overview"><strong><u>General overview</u></strong> - <a href="#up">top</a></h3>
+    <p>This is an interactive generic map template of nowhere that you can use for testing. The map consists of HTML, CSS, JS files. You can customize the map colors, links, hover information etc through simple JavaScript files (JavaScript knowledge is not required). Also you can add unlimited number of clickable pins anywhere on the map using X, Y coordinates, then embed the customized map in your website pages.</p>
+
+
+    <hr><h3 id="installation"><strong><u>Installation in a standard website</u></strong> - <a href="#up">top</a></h3>
+    <ol>
+      <li>Upload the folder '<strong>try-js-map</strong>' to any directory in your website.<br>You can use <a href="https://filezilla-project.org/download.php">FileZilla</a> as FTP client to upload files to your website, and here is a <a href="https://www.youtube.com/watch?v=A-gr0LIWT64">video tutorial</a> about that.</li>
+      <li>Test the map by opening the full path of the 'index.html' file in a web browser (such as Google Chrome), the full path should be something like this:<br><i>http://www.yoursite.com/try-js-map/index.html</i><br>If you don't see the map or redirected to '404 Page not found', make sure you are using the correct path of the uploaded folder.</li>
+      <li>Copy the following code and paste it before <strong>&lt;/head&gt;</strong>  tag in your website page, and make sure to change 'yoursite.com' to the correct full path of the files.
+        <!--https://www.freeformatter.com/html-escape.html-->
+<pre>
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://www.yoursite.com/try-js-map/map-style.css&quot;/&gt;
+&lt;script src=&quot;http://www.yoursite.com/try-js-map/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www.yoursite.com/try-js-map/map-config.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www.yoursite.com/try-js-map/map-interact.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://www.yoursite.com/try-js-map/pins-config.js&quot;&gt;&lt;/script&gt;
+</pre>
+      </li>
+      <li>On your computer, open the file '<strong>try-js-map/index.html</strong>' using any code editor (such as <a href="https://www.sublimetext.com/">Sublime</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>).</li>
+      <li>Copy the code in between <strong>&lt;body&gt;</strong> and <strong>&lt;/body&gt;</strong><br>
+        from
+<pre>
+&lt;span id=&quot;tryjstip&quot;&gt;&lt;/span&gt;
+&lt;div id=&quot;mapwrapper&quot;&gt;
+  &lt;div id=&quot;mapbase&quot;&gt;
+</pre>
+        down to...
+<pre>
+    &lt;/svg&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+</pre>
+      </li>
+      <li>Paste the code in your website page and test the map.</li>
+    </ol>
+      <strong>Important note:</strong> With some templates and due to divs arrangement, the floating hover popup may be pushed away from where it should be, to avoid that we recommend that you cut the span "tryjstip" line of code and paste it just after the opening body tag of the page like this:
+<pre>
+&lt;body&gt;
+&lt;span id=&quot;tryjstip&quot;&gt;&lt;/span&gt;
+</pre>
+
+
+
+
+    <hr><h3 id="wp"><strong>Installation in a WordPress website</strong> - <a href="#up">top</a></h3>
+    <p>Fortunately, we recently converted this template into an installable WordPress plugin zip file (inside the folder '<strong>For WordPress Only</strong>'), so you can install it in your WordPress website as a normal plugin, then customize the map by editing the plugin files from your admin panel:</p>
+    <ol>
+      <li>Login to your WordPress admin page.</li>
+      <li>Go to 'Plugins' > 'Add New'</li>
+      <li>Click 'Upload Plugin' then 'Choose File', open the file '<strong>try-js-map.zip</strong>' ( included in the folder 'For WordPress Only' ).</li>
+      <li>Click 'Install Now', then 'Activate Plugin'.</li>
+      <li>In the left side bar you will see a new menu link for the map, click it to see the map and follow the steps to start the customization.</li>
+    </ol>
+    <p>You can use this shortcode [try_js_map] as many times as you want to display the same map in different pages. If you want to have a different map with new colors and links, you can install a 2nd or 3rd instance of the plugin ( 'try-js-map-ii.zip' and 'try-js-map-iii.zip' included in the downloaded files).</p>
+
+
+
+
+
+
+    <hr><h3 id="customization"><strong><u>Map Customization?</u></strong> - <a href="#up">top</a></h3>
+    <p>You can customize the colors, link, hover information for each area through the included '<strong>map-config.js</strong>' file (JavaScript knowledge is not required). You can open that file using any code editor (such as <a href="https://www.sublimetext.com/">Sublime</a> or <a href="https://notepad-plus-plus.org/">Notepad++</a>).</p>
+    <ul>
+      <li>"<strong>hover</strong>": "write some basic information for the popup",</li>
+      <li>"<strong>url</strong>": "http://www.thelink.com/",//link to any webpage</li>
+      <li>"<strong>target</strong>": "same_window",
+        <ol>
+          <li>"same_window" to open the link in the same window.</li>
+          <li>"new_window" to open the link in a new window.</li>
+          <li>"modal" to open a modal window, in this case you need to change the above "url" to the required modal window name such as<br>"url": "#mymodal"<br><i>Note: This option works only with Bootstrap website templates and Bootstrap based WordPress themes, if you are not sure or if you don't know how to use it, you need to ask your website template/theme provider</i>.</li>
+          <li>"none" use it if you have enough information in the popup and you don't want to make the area clickable but the popup still working.</li>
+        </ol>
+      </li>
+      <li>"<strong>upColor</strong>": "#FFFFF3", "<strong>overColor</strong>": "#ECFFB3", "<strong>downColor</strong>": "#cae9af",<br>You can use this <a href="https://www.w3schools.com/colors/colors_picker.asp">color picker</a> to get the color code.</li>
+      <li>"<strong>active</strong>": true<br>You can set it to false to make this area inactive (not clickable, no highlight, no popup).</li>
+    </ul>
+    <p>The colors of the 'borderColor' and the 'visibleNames' can be found at the end of the 'map-config.js' file.</p>
+
+
+
+
+
+
+    <hr><h3 id="pins"><strong>How to add/remove and modify pins?</strong> - <a href="#up">top</a></h3>
+    <p>You can customize the existing pins, add or remove pins through the file '<strong>pins-config.js</strong>'.</p>
+    <ul>
+      <li>"<strong>shape</strong>": "square", choose either "circle" or "square".</li>
+      <li>"<strong>hover</strong>": "write some basic information for the popup",</li>
+      <li>"<strong>pos_X</strong>": 20, "<strong>pos_Y</strong>": 50, use this <a href="#xy">guide</a> to obtain the correct values.</li>
+      <li>"<strong>size</strong>": 18, size of the pin</li>
+      <li>"<strong>outline</strong>": "#660000",</li>
+      <li>"<strong>upColor</strong>": "#e60000", "<strong>overColor</strong>": "#ffd480",</li>
+      <li>"<strong>url</strong>": "http://www.thelink.com/",//link to any webpage</li>
+      <li>"<strong>target</strong>": "same_window",
+        <ol>
+          <li>"same_window" to open the link in the same window.</li>
+          <li>"new_window" to open the link in a new window.</li>
+          <li>"modal" to open a modal window, in this case you need to change the above "url" to the required modal window name such as<br>"url": "#mymodal"<br><i>Note: This option works only with Bootstrap website templates and Bootstrap based WordPress themes, if you are not sure or if you don't know how to use it, you need to ask your website template/theme provider</i>.</li>
+          <li>"none" use it if you have enough information in the popup and you don't want to make the area clickable but the popup still working.</li>
+        </ol>
+      </li>
+      <li>"<strong>active</strong>": true<br>You can set it to false to make this area inactive (not clickable, no highlight, no popup).</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+    <hr><h3 id="xy"><strong>How to get the X, Y coordinates?</strong> - <a href="#up">top</a></h3>
+    <p>Click any where on the following map guide to get the X, Y coordinate values and use them in the '<strong>pins-config.js</strong>' file:<br><small>This interactive guide requires Adobe Flash Player in your browser, however the actual template files does not include Flash and does not require Flash player to work. If this guide doesn't work for you, you can use this map chart <a href="ess-files/xyguide.png">image</a>.</small></p>
+    <p align="center">
+      <script type="text/javascript">
+      AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','560','height','610','src','ess-files/xyguide','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','ess-files/xyguide' );</script>
+      <noscript>
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="560" height="610">
+            <param name="movie" value="ess-files/xyguide.swf">
+            <param name="quality" value="high">
+            <embed src="ess-files/xyguide.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="560" height="610"></embed>
+          </object>
+        </noscript>
+      </p>
+
+      <hr>
+
+      <p>Thank you for trying our template. If you have any questions that are beyond the scope of this help file, please feel free to contact us through the contact form <a href="https://www.html5interactivemaps.com/assets/knowledge-base/index.html">here</a>.</p>
+      <p class="append-bottom alt large"><strong>Thank you</strong><br>
+        <a href="https://www.html5interactivemaps.com">html5interactiveMaps.com</a><br>Support Team
+      </p>
+  </div><!-- end div .container -->
+</body>
+</html>

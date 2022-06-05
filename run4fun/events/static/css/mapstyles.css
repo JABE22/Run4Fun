@@ -1,0 +1,30 @@
+/* Used only in mapdemos.html */
+
+
+/* mapdemos.html is used only for test purposes */
+
+#map_world {
+    position: relative;
+    border-top: 1px solid black;
+    width: 1400px;
+    height: 900px;
+}
+
+#map_usa {
+    position: relative;
+    border-top: 1px solid black;
+    width: 1400px;
+    height: 900px;
+}
+
+#map_world_ort {
+    position: relative;
+    border-top: 1px solid black;
+    width: 1400px;
+    height: 900px;
+}
+
+.mapimg {
+    height: 100px;
+    width: 180px;
+}

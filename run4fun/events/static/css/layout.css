@@ -1,0 +1,433 @@
+/* MAIN STYLES INCLUDED
+    - Body template and styles
+    - Outermost container styles for all template rows 1-6
+    - Main div element styles for all components
+    - Event box styles
+
+    NOT INCLUDED!!
+    - Text element styles
+    - Form element styles (inputs, buttons, etc.)
+    - Image styles
+    - Animations, keyframes
+    - Responsive solutions (media screen)
+*/
+
+body {
+    display: grid;
+    grid-template: auto auto auto auto auto auto / 20% 60% 20%;
+    /* 6 x 5 grid */
+    background-color: var(--site-bg-color);
+    background-image: url('../img/backgr/bgr2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+    /* Congruent font family style for whole site */
+    font-family: var(--site-font-family);
+    /* var(--site-font); /* Tahoma, "Trebuchet MS", Helvetica, sans-serif; */
+}
+
+body.about {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Border visibility in all main containers - For developing and designing */
+
+.main_container {
+    border: none;
+}
+
+div {
+    border: none;
+}
+
+
+/* (1) First row of the Grid for site name and logo etc. */
+
+.header {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: var(--site-subcolor-first);
+    opacity: 0.95;
+}
+
+.site_brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+/* (2) Second row of the Grid */
+
+.navcontainer {
+    grid-column: 1 / span 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+    background-color: var(--site-subcolor-second);
+    opacity: 0.8;
+}
+
+
+/* (3) Third row of the grid */
+
+.content_header {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.ad {
+    background: linear-gradient(rgba(255, 255, 255, 0.8) 70%, transparent 100%);
+}
+
+
+/* (4) Fourth row of the grid - Main container styles for all pages */
+
+.homecontainer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    justify-self: center;
+    justify-items: center;
+    font-size: 50px;
+    min-height: calc(100vh - 700px);
+    height: auto;
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: var(--container-bg-color);
+}
+
+#eventcontainer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 50px;
+    min-height: calc(100vh - 700px);
+    height: auto;
+    width: 90%;
+    max-width: 80%;
+    padding: 40px;
+    margin-bottom: 40px;
+    background-color: var(--container-bg-color);
+}
+
+#past_eventcontainer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    width: 60%;
+    max-width: 95%;
+    min-width: 50%;
+    min-height: calc(100vh - 700px);
+    justify-self: center;
+    padding: 40px;
+    background-color: var(--container-bg-color);
+}
+
+#search_eventcontainer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: calc(100vh - 500px);
+    padding: 20px;
+    background-color: var(--container-bg-color);
+}
+
+.mapcontainer {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    font-size: 50px;
+    min-height: calc(100vh - 650px);
+    height: auto;
+    width: 100%;
+    padding: calc(var(--global-padding)*4) 0px;
+    margin-bottom: var(--global-margin);
+    background-color: rgb(0, 0, 0, 0.6);
+    /* background: linear-gradient(transparent 0%, rgb(0, 0, 0, 0.6) 10%, rgb(0, 0, 0, 0.6) 90%, transparent 100%);*/
+}
+
+
+/* CONTACT FORM container */
+
+.form_container {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 70%;
+    min-width: min-content;
+    max-width: 1000px;
+    min-height: calc(100vh - 700px);
+    justify-self: center;
+    background-color: var(--textcontainer-bg-color);
+}
+
+#login {
+    width: 70%;
+    min-width: min-content;
+    max-width: 750px;
+}
+
+.contact_details {
+    border-left: solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    color: var(--main-text-color);
+    padding: 20px;
+    margin-left: 0px;
+    height: 100%;
+    font-size: 18px;
+    background-color: var(--site-subcolor-first);
+}
+
+
+/* ABOUT US container */
+
+.about_container {
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission_container {
+    display: flex;
+    overflow: hidden;
+    align-self: center;
+    justify-content: left;
+    gap: 20px;
+    align-content: center;
+    width: 70%;
+    min-height: calc(100vh - 700px);
+    padding: 0px;
+    background-color: var(--textcontainer-bg-color);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.vision_container {
+    display: flex;
+    overflow: hidden;
+    align-self: center;
+    justify-content: right;
+    gap: 20px;
+    align-content: center;
+    width: 70%;
+    min-height: calc(100vh - 700px);
+    padding: 0px;
+    background-color: var(--textcontainer-bg-color);
+    border-top: solid 2px black;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+/* COMPONENT STYLES - Upcoming Event components, boxes etc. */
+
+.eventbox {
+    border-radius: 5px;
+    width: 440px;
+    height: 300px;
+    overflow: hidden;
+    background-image: url("../img/flags/flag_group_a_fin.jpg");
+    background-size: cover;
+    box-shadow: 0px 0px 3px black;
+    padding: 0px;
+}
+
+.eventbox:hover {
+    cursor: pointer;
+    /* background-image: none; */
+    background-color: rgba(255, 255, 255, .7);
+}
+
+
+/* COMPONENT STYLES: Past Event components */
+
+.event_compo {
+    width: 100%;
+    display: block;
+}
+
+.inforow {
+    color: white;
+    font-size: 18px;
+    display: grid;
+    grid-template: auto / 140px auto auto 40px;
+    border-radius: 2px;
+    min-width: 320px;
+    width: 100%;
+    height: 2.5rem;
+    align-content: center;
+    align-items: center;
+    background-color: var(--main-site-color);
+}
+
+.eventrow {
+    display: grid;
+    grid-template: auto auto / 140px auto auto 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid gray;
+    border-radius: 2px;
+    min-width: 25vw;
+    width: 99.6%;
+    height: 4rem;
+    align-content: center;
+    align-items: center;
+    background-color: var(--eventrow-bg-color);
+}
+
+.eventrow:hover {
+    border: 4px solid var(--main-site-color);
+    cursor: pointer;
+    background-color: white;
+}
+
+.eventgrid {
+    display: grid;
+    grid-template-columns: 25rem 25rem 25rem 25rem;
+    grid-template-rows: 25vw 25vw;
+    grid-gap: 10px;
+    background-color: var(--container-bg-color);
+    padding: 10px;
+}
+
+
+/* (5) Fifth row of the grid*/
+
+.vara {
+    padding: var(--global-padding);
+    grid-column: 2;
+    grid-row: 5;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* (6) Sixth row of the grid*/
+
+.default_footer {
+    grid-column: 1 / span 5;
+    grid-row: 6;
+    min-height: 150px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: var(--global-padding);
+    color: var(--main-text-color);
+    background-color: var(--main-site-color);
+    margin-bottom: 0;
+}
+
+
+/* OTHER COMPONENTS: Past Event row 
+   - Header row "Event name" tag for past events */
+
+.event {
+    width: auto;
+}
+
+.event_name {
+    font-size: 24px;
+    width: auto;
+    overflow: hidden;
+}
+
+.country {
+    margin-left: 5px;
+    float: left;
+    height: 30px;
+    width: 45px;
+}
+
+.date {
+    font-size: 1.4rem;
+    float: left;
+    width: 5rem;
+    margin-left: 10px;
+}
+
+
+/* Competitor row */
+
+.place {
+    margin-left: 10px;
+}
+
+.country_competitor {
+    margin-left: 5px;
+    float: left;
+    height: 25px;
+    width: 35px;
+}
+
+.athlete_name {
+    float: left;
+}
+
+.nationality {
+    height: 20px;
+    width: 30px;
+    float: left;
+}
+
+.result_time {
+    float: right;
+    margin-right: 20px;
+}

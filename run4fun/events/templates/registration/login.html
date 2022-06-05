@@ -1,0 +1,32 @@
+<!-- templates/registration/login.html -->
+{% extends 'base.html' %} {% load static %}
+<!-- Page title -->
+{% block title %}Login{% endblock %}
+<!-- Content -->
+{% block content %}
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container ad">
+    <h2 class="page_name">-Login-</h2>
+</div>
+
+<!-- Page content: 4. Grid row elements - Place for contact form and contact details -->
+<div id="login" class="form_container main_container sp">
+    <form id="contact_form" class="sp" method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button class="submit_button zoom" id="submit_event" type="submit">Log in</button>
+    </form>
+    <div class="contact_details">
+        <img src="{% static 'img/pngegg.png' %}" alt="pngegg">
+        <nobr>
+            <h3 class="contact_header">Result service Ltd.</h3>
+        </nobr>
+        <p class="contact_info_text">result.service@yeka.ru</p>
+        <p class="contact_info_text">Have you not registered yet?<br>Please, send us email request<br>to join the Result4Fun<br></p>
+    </div>
+</div>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp"></div>
+
+{% endblock %}

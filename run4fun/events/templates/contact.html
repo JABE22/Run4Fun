@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for upcome -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container">
+    <h2 class="page_name">-Contact us-</h2>
+</div>
+
+<!-- Page content: 4. Grid row elements - Place for contact form and contact details -->
+<div class="form_container main_container sp">
+    <!-- Contact form -->
+    <form id="contact_form" class="sp" method="post" action="/contact/" name="contact_form">
+        {% if messages %} {% for msg in messages %}
+        <div class="submit_info">
+            <p>{{msg}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <!--This is a tag to prevent Cross Site Request Forgery attacks-->
+        {% csrf_token %}
+        <label for="your_name">Your Name</label>
+        <input type="text" name="full_name" class="form-control" id="your_name" placeholder="Firstname Lastname" />
+        <label for="email">Email</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="youraddress@email.com" />
+        <label for="subject">Subject</label>
+        <select id="subject" class="form-control" type="text" name="subject" form="contact_form">
+            <option value="">Select Subject...</option>
+            <option value="subject1">New sport event</option>
+            <option value="subject2">Result service application</option>
+            <option value="subject3">Request for a membership of result service team</option>
+            <option value="subject5">Incorrect information notification</option>
+            <option value="subject6">Service feedback and development ideas</option>
+            <option value="subject6">Other service request</option>
+            <option value="Other">Other</option>
+        </select>
+        <label for="comment">Message</label>
+        <textarea class="form-control" rows="5" id="message" placeholder="Please, write here..." name="message" form="contact_form"></textarea>
+        <div class="submission">
+            <input class="submit_button zoom" id="submit_contact" type="submit" value="Submit" />
+            <div id="validation_info"></div>
+        </div>
+    </form>
+
+    <!-- Contact details -->
+    <div class="contact_details">
+        <img src="{% static 'img/pngegg.png' %}" alt="pngegg">
+        <nobr>
+            <h3 class="contact_header">Result service Ltd.</h3>
+        </nobr>
+        <p class="contact_info_text">result.service@yeka.ru</p>
+        <p class="contact_info_text">70, Lenina Avenue<br>Sverdlovskaya Oblast<br>Yekaterinburg 620078</p>
+        <p class="contact_info_text">+7(991)945-96-47</p>
+    </div>
+</div>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp"></div>
+
+<!-- JavaScript file imports - Page content sensitive files -->
+<script src="{% static 'js/formcon.js' %}"></script>
+
+{% endblock content %}

@@ -1,0 +1,109 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for home -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+<script src="{% static 'js/slideshow.js' %}"></script>
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container ad">
+    <div class="homeslogan">
+        <h2 id="welcome1">I don't run to win races.</h2>
+        <h2 id="welcome2">Nor do I run to get places.</h2>
+    </div>
+    <div class="fading">
+        <h1 class="motivate">Motivate to get &nbsp;</h1>
+        <h1 class="resulted">Result Service</h1>
+        <!-- &reg;Result Service -->
+        <h1 class="motivate">d!</h1>
+    </div>
+</div>
+<!-- Page content: 4. Grid row elements - Responsive image gallery 
+<div class="homecontainer main_container">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/back1.jfif' %}">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe2.jfif' %}">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_proud.jfif' %}">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe.jfif' %}">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_excuses.jfif' %}">
+    <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_getgive.jfif' %}">
+</div>
+-->
+<div class="homecontainer main_container">
+    <div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/back1.jfif' %}" style="width:100%">
+        </div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe2.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_proud.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_excuses.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides1 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_getgive.jfif' %}" style="width:100% ">
+        </div>
+    </div>
+    <div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_getgive.jfif' %}" style="width:100%">
+        </div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_proud.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/back1.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_excuses.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides2 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe2.jfif' %}" style="width:100% ">
+        </div>
+    </div>
+    <div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe.jfif' %}" style="width:100%">
+        </div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_getgive.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_believe2.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_proud.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/back1.jfif' %}" style="width:100% ">
+        </div>
+        <div class="slides3 fade">
+            <img class="gallery zoom_big" src="{% static './img/runphotos/RunningMotivation/vertical/g1_excuses.jfif' %}" style="width:100% ">
+        </div>
+    </div>
+</div>
+
+<script>
+    showSlides("slides1", 0, 8000);
+    showSlides("slides2", 0, 10000);
+    showSlides("slides3", 0, 12000);
+</script>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp ">
+    <p>Image source <a class="btn btn-primary " href="https://www.pexels.com/ " role="button " style="color:goldenrod ">Pexels &raquo;</a></p>
+</div>
+
+{% endblock content %}

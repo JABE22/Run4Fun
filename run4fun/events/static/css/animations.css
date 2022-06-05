@@ -1,0 +1,157 @@
+/* This file contains global animation style properties */
+
+
+/* ZOOM animations */
+
+.zoom {
+    transition: transform .5s;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.03);
+    /* IE 9 */
+    -webkit-transform: scale(1.03);
+    /* Safari 3-8 */
+    transform: scale(1.03);
+}
+
+.zoom_big {
+    transition: transform .5s;
+}
+
+.zoom_big:hover {
+    -ms-transform: scale(1.10);
+    /* IE 9 */
+    -webkit-transform: scale(1.10);
+    /* Safari 3-8 */
+    transform: scale(1.10);
+}
+
+.zoom_ultra {
+    transition: transform .5s;
+}
+
+.zoom_ultra:hover {
+    -ms-transform: scale(1.5);
+    /* IE 9 */
+    -webkit-transform: scale(1.5);
+    /* Safari 3-8 */
+    transform: scale(1.5);
+}
+
+
+/* KEYFRAME properties - Some of these may not be used */
+
+@keyframes margin-lf {
+    from {
+        margin-left: 100vw;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes easefromleft {
+    from {
+        margin-left: 500px;
+        opacity: 0%;
+    }
+    to {
+        margin-left: 0px;
+        opacity: 100%
+    }
+}
+
+@keyframes easefromtop {
+    from {
+        margin-top: -70px;
+        opacity: 0%;
+    }
+    to {
+        margin-top: 0px;
+        opacity: 100%
+    }
+}
+
+@keyframes easefromup {
+    from {
+        max-height: 0px;
+    }
+    to {
+        max-height: 1000px;
+    }
+}
+
+@keyframes height {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes hidetext {
+    from {
+        width: 0%
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes fade {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: .0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes blinking {
+    0% {
+        color: black;
+    }
+    100% {
+        -webkit-text-fill-color: rgb(218, 206, 32);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+        -webkit-text-fill-color: rgb(218, 206, 32);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    100% {
+        transform: scale(1);
+    }
+}

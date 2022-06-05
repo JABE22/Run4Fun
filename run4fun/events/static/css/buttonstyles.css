@@ -1,0 +1,76 @@
+/* This file contains style properties for button elements 
+    - Please, note that some button styels may be defined in 
+      formstyles.css
+*/
+
+#search_button {
+    /* Not used. Replaced by serach icon inside input element */
+    border: none;
+    float: left;
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    background-image: url('../icons/micons/search.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+#filtermenu_button {
+    border: none;
+    float: right;
+    height: 100%;
+    width: 50px;
+    min-width: 50px;
+    background-color: black;
+    background-image: url('../icons/micons/past.PNG');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+#search_button:hover,
+#filtermenu_button:hover {
+    box-shadow: 0px 0px 0px 2px var(--site-subcolor-third);
+}
+
+#submit_contact,
+#submit_event {
+    border: solid 1px var(--site-subcolor-third);
+    padding: 8px;
+    margin: 0px;
+    width: 150px;
+    background: var(--main-site-color);
+    font-family: Teko;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#submit:hover {
+    box-shadow: 0px 0px 1px 1px rgba(255, 165, 0, .9);
+}
+
+#submit:active {
+    background-color: white;
+    color: black;
+}
+
+button:visited {
+    color: whitesmoke;
+}
+
+button:active {
+    color: black;
+}
+
+.nostyle {
+    color: black;
+    text-decoration: none;
+}
+
+.nostyle:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,119 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for enote -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+<!-- The content of the page will be shown only logged in users -->
+{% if user.is_authenticated %}
+
+<!-- Google map and address autocomplete import 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEzv4wGM64Y-Q1l-cKtP2qNR2_LnNGniE&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cAB&language=en" async defer></script>
+-->
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container">
+    <h2 class="page_name">-Event notification-</h2>
+</div>
+
+<!-- Page content: 4. Grid row elements - Place for event notification form -->
+<div class="form_container main_container sp">
+    <!-- Event notification form -->
+    <form id="addevent_form" class="sp" method="post" action="/enote/">
+        {% if messages %} {% for msg in messages %}
+        <div class="submit_info">
+            <p>{{msg}}</p>
+        </div>
+        {% endfor %} {% endif %}
+        <!--This is a tag to prevent Cross Site Request Forgery attacks-->
+        {% csrf_token %}
+        <!-- First section: Event organizer inputs -->
+        <label>Event organizer info</label>
+        <div>
+            <div style="margin-top: 20px;">
+                <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
+                <span class="sb-title">Address Selection</span>
+            </div>
+            <input id="organiz_name" class="form-control" type="text" name="org_name" placeholder="Organization name">
+            <input id="location" class="form-control" type="text" name="org_address" placeholder="Address" />
+            <!-- Google map is placed here (disabled) 
+            <div class="map-container">
+                <div class="map" id="map"></div>
+            </div>
+            -->
+            <input id="locality" class="form-control" type="text" name="org_city" placeholder="City" />
+            <div class="row_flex">
+                <input id="administrative_area_level_1" class="form-control" type="text" name="org_state" placeholder="State or Province" />
+                <input id="postal_code" class="form-control" type="text" name="org_postcode" placeholder="Zip or Postal code" />
+            </div>
+            <input id="country" class="form-control" type="text" name="org_country" list="countries" placeholder="Country" />
+            <datalist id="countries"></datalist>
+        </div>
+        <hr>
+        <!-- Second section: Event info -->
+        <label for="dest">Event info</label>
+        <input id="ename" class="form-control" type="text" name="event_name" placeholder="Event name">
+        <div class="datetime_compo">
+            <label for="date">Date and Start time</label>
+            <div class="row_flex">
+                <input type="date" class="form-control" id="date" name="event_date">
+                <input type="time" class="form-control" id="time" name="event_time">
+            </div>
+        </div>
+        <select id="dists" class="select-options" type="text" name="event_dist" required>
+                <option value="0" selected disabled>Select distance</option>
+                <option value="5">5 km</option>
+                <option value="10">10 km</option>
+                <option value="15">15 km</option>
+                <option value="21">Half Marathon (21 km)</option>
+                <option value="42">Marathon (42 km)</option>
+                <option value="-1">Custom</option>
+            </select>
+        <hr>
+        <!-- Third section: Person in charge info -->
+        <label for="fname">Person in charge of the event</label>
+        <div class="row_flex">
+            <input id="fname" class="form-control" type="text" name="firstname" placeholder="Firstname">
+            <input id="lname" class="form-control" type="text" name="lastname" placeholder="Lastname">
+        </div>
+        <input id="email" class="form-control" type="email" name="email" placeholder="Email">
+        <input id="phone" class="form-control" type="tel" name="phone" placeholder="Phone number" name="phone">
+        <hr>
+        <!-- Fourth section: Additional free style info -->
+        <label for="comment">Additional info</label>
+        <textarea id="message" class="form-control" type="text" name="add_info" rows="5" placeholder="Please, write here..."></textarea>
+        <hr>
+        <div class="submission">
+            <button class="submit_button zoom" id="submit_event" type="submit">Submit Event</button>
+            <div id="validation_info"></div>
+        </div>
+    </form>
+    <!-- Page logo, page name and form info -->
+    <div class="contact_details">
+        <img src="{% static 'img/pngegg.png' %}" alt="pngegg">
+        <nobr>
+            <h3 class="contact_header">CUSTOMER PORTAL</h3>
+        </nobr>
+        <p class="contact_info_text">Here you can insert new event into the database</p>
+        <p class="contact_info_text">Event information will be handled by our service maintenance team. Responsible person will be contacted if ambiguities occur.</p>
+    </div>
+</div>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp"></div>
+
+<!-- JavaScript file imports - Page content sensitive files -->
+<script src="{% static 'js/formevent.js' %}"></script>
+<script src="{% static 'js/datalist.js' %}"></script>
+<!-- User identification required content ends here -->
+{% else %}
+<!-- Login suggested if user tries to navigate /enote -->
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a>
+<!-- End of login -->
+{% endif %}
+<!-- End of the content block -->
+{% endblock content %}

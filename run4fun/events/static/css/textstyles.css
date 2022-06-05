@@ -1,0 +1,206 @@
+/* TEXT STYLES - Containers and elements */
+
+
+/* Site font */
+
+@font-face {
+    font-family: Teko;
+    src: url('/static/fonts/Teko/Teko-Regular.woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Styles for text components of all site pages 
+   - Clear text elements
+     e.g., h1, h2, h3, p, label, etc.
+   - Div elements which has only text content */
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+.site_name {
+    color: white;
+    font-size: var(--sitename-font-size);
+    white-space: nowrap;
+    -webkit-text-fill-color: silver;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: goldenrod;
+}
+
+.page_name {
+    color: black;
+    font-size: var(--pagename-font-size) !important;
+}
+
+.mission_text,
+.vision_text {
+    display: flex;
+    flex-direction: column;
+    width: 54%;
+    justify-content: center;
+}
+
+.mission_text {
+    margin-right: 40px;
+}
+
+.vision_text {
+    margin-left: 40px;
+}
+
+#mission_h3,
+#vision_h3 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.homeslogan {
+    display: flex;
+    border-bottom: solid 3px var(--main-site-color);
+}
+
+#welcome1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: auto;
+    animation: opacity 2s;
+    -webkit-text-fill-color: var(--main-site-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#welcome2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    width: auto;
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    -webkit-text-fill-color: var(--main-text-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--main-site-color);
+}
+
+.event_text {
+    /*border: solid;*/
+    font-size: 20px;
+    padding: 0px 30px 10px 10px;
+}
+
+#event_name {
+    /*border: solid;*/
+    font-size: 30px;
+    margin: 20px 5px 5px 5px;
+    padding-top: 0px;
+}
+
+.contact_header {
+    font-size: 2rem;
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    margin-top: 0px;
+}
+
+.contact_details>p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+#slogan {
+    margin: 5px;
+    font-size: 20px;
+    text-shadow: 0px 0px 1px black;
+    color: var(--main-text-color);
+}
+
+#developers {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    text-shadow: 0px 0px 1px #ddd;
+}
+
+#company_name {
+    margin: 5px;
+    font-size: 16px;
+    text-shadow: 0px 0px 1px #ddd;
+    color: #000;
+}
+
+.fading {
+    margin-top: 0px;
+    padding: 20px;
+    display: flex;
+    animation: opacity 2s;
+    animation-timing-function: ease;
+    justify-content: center;
+}
+
+.motivate {
+    white-space: nowrap;
+    text-align: center;
+    margin: 0px;
+    animation: easefromtop 2s;
+    animation-timing-function: linear;
+    -webkit-text-fill-color: var(--main-text-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--main-site-color);
+}
+
+.resulted {
+    white-space: nowrap;
+    text-align: center;
+    margin: 0px;
+    animation-name: appear, blinking;
+    animation-timing-function: linear, ease;
+    animation-duration: 6s, 0.5s;
+    animation-iteration-count: 1, 3;
+    animation-delay: 0s, 6s;
+    -webkit-text-fill-color: var(--main-site-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.justify {
+    text-align: justify;
+    line-height: 1.5;
+    text-justify: inter-word;
+}
+
+.date_container {
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#date {
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    font-size: var(--datetime-font-size);
+    color: var(--main-text-color);
+}
+
+.contact_info_text {
+    text-align: center;
+}

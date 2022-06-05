@@ -1,0 +1,29 @@
+/* Site properties */
+
+.sp {
+    /* Site colors */
+    --main-site-color: #445463;
+    --site-subcolor-first: #4D4D4D;
+    --site-subcolor-second: #333;
+    --site-subcolor-third: goldenrod;
+    --site-bg-color: white;
+    /* Navbar properties */
+    --navbar-font-size: 1.2rem;
+    /* Text properties */
+    --site-font-family: Teko;
+    --main-text-color: whitesmoke;
+    --sitename-font-size: 3.0rem;
+    --pagename-font-size: 2.5rem;
+    --datetime-font-size: 1.5rem;
+    --textcontainer-bg-color: rgba(211, 211, 211, .8);
+    /* Common containers */
+    --container-bg-color: transparent;
+    --eventrow-bg-color: #d7e7f7;
+    /* Margins and paddings */
+    --global-padding: 20px;
+    --global-margin: 40px;
+    /* Form and button properties */
+    --button-text-color: white;
+    /* Map colors */
+    --map-border-color: gold;
+}

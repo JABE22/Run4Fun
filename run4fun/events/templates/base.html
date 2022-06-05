@@ -1,0 +1,97 @@
+<!DOCTYPE html> {% load static active-nav %}
+<html lang="en">
+
+<head>
+    <title>R4F - Home</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Project styles -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/globalvariables.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/imgstyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/textstyles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/buttonstyles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/formstyles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navstyles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+    <!-- Page specific styles -->
+    {% block styles %}
+    <!-- Content Goes here -->
+    {% endblock styles %}
+
+    <!-- This is for responsive navbar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="sp">
+    <!-- Global site header: 1. Grid row elements -->
+    <div class="header main_container">
+        <a class="site_brand" href="/home">
+            <img class="page_logo zoom_big" alt="page_logo" src="{% static 'img/pngegg.png' %}">
+            <h1 class="site_name zoom_big">Run4Fun</h1>
+        </a>
+        {% if user.is_authenticated %}
+        <h3 style="color: white;">Welcome, {{ user.username }}!</h3>
+        {% endif %}
+        <div id="page_img">
+            <div class="opacity_filter">
+                <a href="https://designfromfinland.com/">
+                    <img id="designfinland" class="zoom_ultra" alt="designfinland" src="{% static 'img/mission/designfromfinland_gray.jpg' %}">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar: 2. Grid row elements -->
+    <div class="navcontainer main_container sp">
+        <div class="topnav" id="respnav">
+            <a href="/home" class="{{ home }}">Home</a>
+            <a href="/upcome" class="{{ upcome }}">Upcoming</a>
+            <a href="/past" class="{{ past }}">Past</a>
+            <a href="/search" class="{{ search }}">Search</a>
+            <a href="/about" class="{{ about }}">About</a>
+            <a href="/contact" class="{{ contact }}">Contact</a>
+            <a href="/map" class="{{ map }}">Map</a>
+            <!-- If user is logged in, display event notification menu item -->
+            {% if user.is_authenticated %}
+            <a href="/enote" class="admin_menu {{ admin_menu }}">Notification</a>
+            <a href="{% url 'logout' %}" class="{% navactive request 'logout' %}">Logout</a>
+            <!-- -->
+            {% else %}
+            <a href="{% url 'login' %}" class="{% navactive request 'login' %}">Login</a>
+            <!-- -->
+            {% endif %}
+            <!-- Responsive navbar settings -->
+            <a href="javascript:void(0);" class="icon" onclick="setresponsive()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <!-- Date -->
+        <div class="date_container">
+            <p id="date"></p>
+        </div>
+    </div>
+
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+
+    <!-- Footer with partner logos: 6. Grid row elements -->
+    <div class="default_footer main_container">
+        <img id="madeinfinland" src="{% static 'img/mission/avainlippu_dff_nobg.png' %}" alt="madedesign_finland">
+        <img id="urfu" src="{% static 'img/logo_urfu_nobg.png' %}" alt="UrFU">
+        <img id="jamasoft" src="{% static 'img/logo_jamasoft1.png' %}" alt="jama_logo">
+        <img id="worldsmarathons" class="partner_logo" src="{% static 'img/logos/worldsmarathons.png' %}" alt="worlds_marathons">
+        <img id="pexels" class="partner_logo" src="{% static 'img/logos/pexels-logo.png' %}" alt="pexels">
+    </div>
+
+    <!-- JavaScript file imports - JS files which are page content sensitive -->
+    <script src="{% static 'js/time.js' %}"></script>
+    <script src="{% static 'js/responsive.js' %}"></script>
+
+</body>
+
+</html>

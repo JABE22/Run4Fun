@@ -1,0 +1,151 @@
+/* RESPONSIVE SOLUTION
+    - Content scaling for several screen sizes 
+    - 650px, 750px, 900px, 1000px, 1300px supported
+*/
+
+
+/* Content display modifications when screen width less than 650 pixels */
+
+@media screen and (max-width: 650px) {
+    .topnav a:not(.active) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        border-bottom: solid 1px black;
+    }
+    .eventbox {
+        width: 85vw;
+        height: 50vh;
+    }
+    .form_container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+    .search_form {
+        width: 90%;
+    }
+}
+
+
+/* Content display modifications when screen width less than 750 pixels */
+
+@media screen and (max-width: 750px) {
+    .fading .motivate {
+        font-size: 8vw;
+        -webkit-text-fill-color: black;
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: var(--main-site-color);
+    }
+    .fading .resulted {
+        font-size: 8vw;
+        -webkit-text-fill-color: var(--site-subcolor-third);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: var(--main-site-color);
+    }
+    #welcome1,
+    #welcome2 {
+        font-size: 10vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        -webkit-text-fill-color: var(--main-site-color);
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: var(--site-subcolor-second);
+    }
+    .homeslogan {
+        display: block;
+    }
+    .form_container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contact_details {
+        width: 100%;
+    }
+}
+
+
+/* Content display modifications when screen width less than 900 pixels */
+
+@media screen and (max-width: 900px) {
+    #page_img {
+        display: none;
+    }
+    .about_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mission_container,
+    .vision_container {
+        width: 90%;
+        flex-direction: column;
+    }
+    .mission_text,
+    .vision_text {
+        margin: 0px;
+    }
+    .mission_text,
+    .vision_text {
+        padding: 20px;
+        width: 90%;
+    }
+    #aboutgirl {
+        width: 100%;
+    }
+    #aboutgirl2 {
+        display: none;
+    }
+    #aboutgirl2_mobile {
+        display: block;
+        width: 100%;
+    }
+    .header .partner_logo {
+        display: none;
+    }
+}
+
+
+/* Content display modifications when screen width less than 1000 pixels */
+
+@media screen and (max-width: 1000px) {
+    .row_flex {
+        flex-direction: column;
+    }
+}
+
+
+/* Content display modifications when screen width less than 1300 pixels */
+
+@media screen and (max-width: 1300px) {
+    .date_container {
+        display: none;
+    }
+    .topnav {
+        width: 100%;
+    }
+    .justify {
+        font-size: 1.0rem;
+        margin-top: 0px;
+    }
+    #mission_h3,
+    #vision_h3 {
+        margin-top: 0px;
+        font-size: 1.5rem;
+    }
+}

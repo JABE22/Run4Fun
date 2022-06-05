@@ -1,0 +1,119 @@
+[{
+        "date": "2021-10-02",
+        "ename": "Virgin London Marathon",
+        "ecode": "GB-VLM",
+        "country": "Great Britain",
+        "ccode": "GBR",
+        "city": "London",
+        "dist": [42]
+    },
+    {
+        "date": "2021-02-05",
+        "ename": "Stockholm Half Mararthon",
+        "ecode": "SW-SHM",
+        "country": "Sweden",
+        "ccode": "SWE",
+        "city": "Stockholm",
+        "dist": [21]
+    },
+    {
+        "date": "2021-10-24",
+        "ename": "Moscow Half Marathon",
+        "ecode": "RU-MHM",
+        "country": "Russia",
+        "ccode": "RUS",
+        "city": "Moscow",
+        "dist": [21]
+    },
+    {
+        "date": "2021-03-06",
+        "ename": "Frankfurt Mainova Half Marathon",
+        "ecode": "DE-FMHM",
+        "country": "Germany",
+        "ccode": "GER",
+        "city": "Frankfurt",
+        "dist": [21.10]
+    },
+    {
+        "date": "2021-09-05",
+        "ename": "Harmonie Mutuelle Semi-marathon de Paris",
+        "ecode": "FR-HMS",
+        "country": "France",
+        "ccode": "FRA",
+        "city": "Paris",
+        "dist": [19.5]
+    },
+    {
+        "date": "2021-10-11",
+        "ename": "Turin Half Marathon Gran Premio Città Di Collegno",
+        "ecode": "IT-THM",
+        "country": "Italy",
+        "ccode": "ITA",
+        "city": "Torino",
+        "dist": [21.10]
+    },
+    {
+        "date": "2021-04-03",
+        "ename": "Madrid Half Marathon",
+        "ecode": "SP-MHM",
+        "country": "Spain",
+        "ccode": "SPA",
+        "city": "Madrid",
+        "dist": [21, 10]
+    },
+    {
+        "date": "2020-09-06",
+        "ename": "Cavalry Cross Country Half Marathon",
+        "ecode": "TH-CCCHM",
+        "country": "Thailand",
+        "ccode": "THA",
+        "city": "Saraburi",
+        "dist": [21, 14.50, 10, 5]
+    },
+    {
+        "date": "2021-09-12",
+        "ename": "Mins Half Marathon",
+        "ecode": "BL-MHM",
+        "country": "Belarus",
+        "ccode": "BLR",
+        "city": "Minsk",
+        "dist": [21.10, 10, 5]
+    },
+    {
+        "date": "2021-08-29",
+        "ename": "Tampere Half Marathon",
+        "ecode": "FI-THM",
+        "country": "Finland",
+        "ccode": "FIN",
+        "city": "Tampere",
+        "dist": [21.1, 10]
+
+    },
+    {
+        "date": "2021-04-10",
+        "ename": "São Paulo Marathon",
+        "ecode": "BR-SPM",
+        "country": "Brazil",
+        "ccode": "BRA",
+        "city": "São Paulo",
+        "dist": [21, 10, 5]
+    },
+    {
+        "date": "2021-05-11",
+        "ename": "Tokyo Half Marathon",
+        "ecode": "JP-THM",
+        "country": "Japan",
+        "ccode": "JPN",
+        "city": "Tokyo",
+        "dist": [21]
+    },
+    {
+        "date": "2021-07-23",
+        "ename": "New York Midnight Run",
+        "ecode": "US-NYMR",
+        "country": "The United States",
+        "ccode": "USA",
+        "city": "New York",
+        "dist": [21, 15, 10, 5]
+    }
+]

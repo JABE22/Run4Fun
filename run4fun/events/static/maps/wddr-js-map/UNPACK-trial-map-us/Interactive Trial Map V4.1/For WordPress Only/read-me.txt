@@ -1,0 +1,3 @@
+Upload and install the first plugin zip file only and you can use the shortcode as many times as you want in different pages to display the same map.
+
+If you want to have a different map (with other colors, links, etc) you can upload and install the second and third plugin zip file.

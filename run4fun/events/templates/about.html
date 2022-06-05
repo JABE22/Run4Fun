@@ -1,0 +1,48 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for upcome -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+
+<!-- Page header: 3. Grid row elements - Place for page name and details -->
+<div class="content_header main_container">
+    <h2 class="page_name">-About us-</h2>
+</div>
+
+<!-- Page content: 4. Grid row elements - Place for actual page content -->
+<div class="about_container">
+    <div class="mission_container main_container sp">
+        <img id="aboutgirl" src="{% static 'img/runphotos/girl_front.jfif' %}" alt="stretch-girl-1">
+        <div class="mission_text">
+            <h3 id="mission_h3">Our Mission</h3>
+            <p class="justify">We collect sport event information, both upcoming and past, and strive to combine these existing dispersed databases under the same service portal. Our mission is to present this data in a meaningful and visually modern way and in such manner
+                that browsing sport event results is moderately fun and professional at the same time. Finding desired results relevant to user must be easy, fast and to be done feeling comfortable from the beginning of the use of the result service until
+                the goal is reached, and visit on the site will end. Also, we want to provide such a beautiful and elegant site, that user do not want to close our page even after the desired information has gained ;).
+            </p>
+        </div>
+    </div>
+    <div class="vision_container main_container sp">
+        <!-- Visible in small screens -->
+        <img id="aboutgirl2_mobile" src="{% static 'img/runphotos/girl_side.png' %}" alt="stretch-girl-2">
+        <div class="vision_text">
+            <h3 id="vision_h3">Vision</h3>
+            <p class="justify">Since we know that there are a lot of enthusiastic athletes and data lovers we do not want to only show your interval and end time of the competition, but also how is your progress over longer period. In our future vision users of the service
+                can have their own personal user profile and check progress themself with comprehensive graphical and statistical feedback. The comparison is an integral part of the competition, not necessarily to others, but to athlete himself and his
+                own previous performance. But don't worry, we are creative for you and our promise to you is to find nice, fun and very pleasant information from all your past competitions and combine them in such way that you are going to be impressed,
+                even if you have not the greatest passion for data. Let's do it!!
+            </p>
+        </div>
+        <!-- Hidden in small screens -->
+        <img id="aboutgirl2" src="{% static 'img/runphotos/girl_side.png' %}" alt="stretch-girl-2">
+    </div>
+</div>
+</div>
+
+<!-- Reserve container: 5. Grid row elements -->
+<div class="vara main_container sp"></div>
+
+{% endblock content %}

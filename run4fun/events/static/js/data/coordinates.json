@@ -1,0 +1,128 @@
+[{
+        "country": "Finland",
+        "city": "Tampere",
+        "coord": [520, 225],
+        "coord_w": []
+    },
+    {
+        "country": "Finland",
+        "city": "Helsinki",
+        "coord": [530, 240],
+        "coord_w": []
+    },
+    {
+        "country": "Finland",
+        "city": "Rovaniemi",
+        "coord": [530, 145],
+        "coord_w": []
+    },
+    {
+        "country": "Sweden",
+        "city": "Gothenburg",
+        "coord": [430, 270],
+        "coord_w": []
+    },
+    {
+        "country": "Taiwan",
+        "city": "Taipei",
+        "coord": [712, 375],
+        "coord_w": []
+    },
+    {
+        "country": "USA, Texas",
+        "city": "Kingwood",
+        "coord": [500, 460],
+        "coord_w": []
+    },
+    {
+        "country": "USA, Montana",
+        "city": "Big Fork",
+        "coord": [400, 315],
+        "coord_w": []
+    },
+    {
+        "country": "Brazil",
+        "city": "São Paulo",
+        "coord": [595, 340],
+        "coord_w": []
+    },
+    {
+        "country": "Great Britain",
+        "city": "Nottingham",
+        "coord": [300, 320],
+        "coord_w": []
+    },
+    {
+        "country": "Germany",
+        "city": "Bräulingen",
+        "coord": [385, 415],
+        "coord_w": []
+    },
+    {
+        "country": "Germany",
+        "city": "Füssen",
+        "coord": [410, 420],
+        "coord_w": []
+    },
+    {
+        "country": "Lithuania",
+        "city": "Vilnius",
+        "coord": [545, 325],
+        "coord_w": []
+    },
+    {
+        "country": "Russia",
+        "city": "Moscow",
+        "coord": [700, 305],
+        "coord_a": [200, 150],
+        "coord_w": []
+    },
+    {
+        "country": "Portugal",
+        "city": "Lisboa",
+        "coord": [140, 500],
+        "coord_w": []
+    },
+    {
+        "country": "Tanzania",
+        "city": "Marangu",
+        "coord": [655, 360],
+        "coord_w": []
+    },
+    {
+        "country": "South-Africa",
+        "city": "Cape Town",
+        "coord": [520, 615],
+        "coord_w": []
+    },
+    {
+        "country": "Nepal",
+        "city": "Khangsar",
+        "coord": [480, 350],
+        "coord_w": []
+    },
+    {
+        "country": "Israel",
+        "city": "Ein Bokek",
+        "coord": [185, 330],
+        "coord_w": []
+    },
+    {
+        "country": "Maldives",
+        "city": "Addu City",
+        "coord": [430, 545],
+        "coord_w": []
+    },
+    {
+        "country": "Australia",
+        "city": "Sydney",
+        "coord": [430, 545],
+        "coord_w": []
+    },
+    {
+        "country": "New Zealand",
+        "city": "Taranaki",
+        "coord": [732, 527],
+        "coord_w": []
+    }
+]

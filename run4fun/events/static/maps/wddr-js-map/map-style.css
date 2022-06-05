@@ -1,0 +1,128 @@
+﻿#mapwrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 0px;
+    background-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#mapwrapper svg {
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+    -webkit-filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.9));
+    filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, 0.9));
+}
+
+#wddrlevel1 {
+    font-weight: bold;
+    width: 100%;
+}
+
+.backtoworld {
+    fill: var(--site-subcolor-third);
+    -webkit-transition: fill 0.1s ease;
+    -moz-transition: fill 0.1s ease;
+    -o-transition: fill 0.1s ease;
+    transition: fill 0.1s ease;
+    cursor: pointer;
+}
+
+.backtoworld:hover {
+    fill: cornsilk;
+}
+
+#wddrjstip {
+    font: 14px/16px Trebuchet MS, Helvetica, Arial, sans-serif;
+    display: none;
+    max-width: 90%;
+    padding: 5px;
+    border: 1px solid #404040;
+    color: white;
+    z-index: 1000;
+    float: left;
+    position: absolute;
+    background: rgba(111, 111, 111, 0.7);
+    word-break: keep-all;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#wddrjstip p {
+    margin: 0!important;
+    color: #404040!important;
+}
+
+#wddrjstip img {
+    float: left;
+    padding: 3px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 320px) {
+    #mapwrapper svg {
+        height: 160px;
+    }
+}
+
+@media screen and (max-width: 400px) and (min-width: 321px) {
+    #mapwrapper svg {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 401px) {
+    #mapwrapper svg {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 568px) and (min-width: 481px) {
+    #mapwrapper svg {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 685px) and (min-width: 569px) {
+    #mapwrapper svg {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 686px) {
+    #mapwrapper svg {
+        height: 430px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #mapwrapper svg {
+        height: 480px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    #mapwrapper svg {
+        height: 880px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #mapwrapper svg {
+        height: 1080px;
+    }
+}
+
+
+/* THIS IS TO HIDE AN AREA IF NEEDED
+#wddrjs2, #wddrjsvn2 {
+  display: none;
+}*/

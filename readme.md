@@ -77,11 +77,11 @@ Web application is developed using Python conda (4.13.0)
 
 ![alt admin_home](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_home.JPG)
 
-**Admin home (django built-in)**
+**Admin "Results" model (table)**
 
 ![alt admin_results](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_results.JPG)
 
-**Admin home (django built-in)**
+**Admin "Results" -> csv file upload**
 
 ![alt admin_upload-csv](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_upload-csv.JPG)
 

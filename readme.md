@@ -13,6 +13,8 @@ Notes:
 
 ### Django framework integration
 
+![alt django_logo](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/django.JPG)
+
 In this repository, front-end project files from the repository above are integrated to django framework. Also, this project extends demo site by inserting database solution and other django built-in functionalities
 
 **Django built-in functionality used**
@@ -95,7 +97,7 @@ Event notification page is planned only for site customers which are marathon ev
 Page form works similarly as contact form. Some properties of the form:
 * Moderate form field validation (Only a few countries are supported)
 * Clears data fields after succesfull submit and redirect to /enote (delay set to three seconds)
-* * Submitting form from the same IP address is not limited (could be limited)
+* Submitting form from the same IP address is not limited (could be limited)
 
 ![alt enote_upper](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Enote.JPG)
 ![alt enote_lower](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Enote2.JPG)
@@ -125,4 +127,10 @@ Admin portal is basically default django user interface. Following images demons
 
 ### Database design
 
-![alt db_chart_events]()
+Models to handle event details and race results
+
+![alt db_chart_events](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/db_events.JPG)
+
+Models to handle form data of the site
+
+![alt db_chart_forms](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/db_forms.JPG)

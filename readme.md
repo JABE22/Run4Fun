@@ -1,13 +1,14 @@
 # Run4Fun - Result Service
 ## Django Web Application for marathon or half marathon events
 
-*This project is a university master's degree course work in Development of Web Applications*
+*This project is a university master's degree course work in Development of Web Applications at Ural Federal University, spring 2022*
+
+Date of completion for evaluation: 10.6.2022
 
 For site business idea and user interface, read more here https://github.com/JABE22/jabe22.github.io
+Project demo Published in https://jabe22.github.io/ResultService/home.html
 
-**Project demo Published in https://jabe22.github.io/ResultService/home.html**
-
-Notes: 
+**Notes:** 
 * Style design (site responsiveness etc.) are not considered here. Please, visit links above.
 * This project is not optimized for security issues
 

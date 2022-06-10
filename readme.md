@@ -37,15 +37,27 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
-### Data flow diagram
+### Data flow diagram and main ideology
 
 Following diagram describes how the project data structure is implemented.
 
 ![alt data_flow_diagram](run4fun/ProjectImages/data_flow_chart.jpg)
 
-Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page user interface functionality is powered by JavaScript.
+#### Brief explanation of the main concepts of the chart
 
-Back-end works within Python Django framework to read and write into the database. Django API controls navigation between site pages, database functionality such as handling form data, login, admin and other built-in functionalities which will use dynamic database. However, form data validation passes through scripts written by JavaScript and after successful validation submit events are directed to python views and handled there.
+Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page UI functionality is powered by JavaScript.
+
+Back-end works within Python Django framework to read and write into the database. Django API controls navigation between site pages, database functionality such as handling form data, login, admin and other built-in functionalities which will use dynamic database. However, form data validation passes through scripts written by JavaScript and only after successful validation submit event will be directed to the python views and handled there.
+
+In the chart, site management area means service maintenance and part of manual work, in which Run4Fun company representative requests (cooperates event organizer IT team) and receive possible race result data from them. After having access to data, he writes the python scripts in order to transform received data into a suitable format to store it to the Run4Fun web application database.
+
+#### About the business idea of the service
+
+For end users (athletes and their coaches, their families and friends) site is planned to be free of charge and read only type (in launch version), except contact form. In later versions, private functionalities for athletes will be added behind user authentication and then customized content will be added to the site (user statistics etc.). At that point, paid content may become a thing to discuss and situation evaluated according to the market.
+
+Business idea covers customers motivation to pay for a service where their events are advertised and event race results accessible via modern and prominent web page for their participants. Idea is to build a website which will be marketed via running event organizers or sport clubs itself and that is possible if it produces added value. Also, one of the greatest motivation is to unite databases between running event organizers from all over world and put the data into the same place.
+
+## Web Application UI introduction
 
 ### Website visitor and customer pages
 

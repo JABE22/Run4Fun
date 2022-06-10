@@ -37,6 +37,16 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
+### Data flow diagram
+
+Following diagram describes how the project data structure is implemented.
+
+![alt data_flow_diagram](ProjectImages/data_flow_chart.JPG)
+
+Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page user interface functionality is powered by JavaScript.
+
+Back-end works within Python Django framework to read and write into the database. Django API controls navigation between site pages, database functionality such as handling form data, login, admin and other built-in functionalities which will use dynamic database. However, form data validation passes through scripts written by JavaScript and after successful validation submit events are directed to python views and handled there.
+
 ### Website visitor and customer pages
 
 **Home**

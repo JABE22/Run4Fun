@@ -37,13 +37,13 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
-### Data flow diagram and main ideology
+## Data flow diagram and main ideology
 
 Following diagram describes how the project data structure is implemented.
 
 ![alt data_flow_diagram](run4fun/ProjectImages/data_flow_chart.jpg)
 
-#### Brief explanation of the main concepts of the chart
+### Brief explanation of the main concepts of the chart
 
 Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page UI functionality is powered by JavaScript.
 
@@ -51,7 +51,7 @@ Back-end works within Python Django framework to read and write into the databas
 
 In the chart, site management area means service maintenance and part of manual work, in which Run4Fun company representative requests (cooperates event organizer IT team) and receive possible race result data from them. After having access to data, he writes the python scripts in order to transform received data into a suitable format to store it to the Run4Fun web application database.
 
-#### About the business idea of the service
+### About the business idea of the service
 
 For end users (athletes and their coaches, their families and friends) site is planned to be free of charge and read only type (in launch version), except contact form. In later versions, private functionalities for athletes will be added behind user authentication and then customized content will be added to the site (user statistics etc.). At that point, paid content may become a thing to discuss and situation evaluated according to the market.
 
@@ -148,7 +148,7 @@ Admin portal is basically default django user interface. Following images demons
 ![alt admin_upload-csv](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_upload-csv.JPG)
 
 
-### Database design
+## Database design
 
 Models to handle event details and race results
 

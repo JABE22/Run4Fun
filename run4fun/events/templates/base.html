@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>R4F - Home</title>
+    {% block title %} {% endblock title %}
+    <link rel="icon" type="image/x-icon" href="{% static 'img/pngegg.png' %}">
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,7 +58,7 @@
             <a href="/map" class="{{ map }}">Map</a>
             <!-- If user is logged in, display event notification menu item -->
             {% if user.is_authenticated %}
-            <a href="/enote" class="admin_menu {{ admin_menu }}">Notification</a>
+            <a href="/enote" class="admin_menu {{ enote }}">Notification</a>
             <a href="{% url 'logout' %}" class="{% navactive request 'logout' %}">Logout</a>
             <!-- -->
             {% else %}

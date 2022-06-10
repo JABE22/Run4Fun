@@ -41,7 +41,7 @@ Web application is developed using Python conda (4.13.0)
 
 Following diagram describes how the project data structure is implemented.
 
-![alt data_flow_diagram](ProjectImages/data_flow_chart.JPG)
+![alt data_flow_diagram](run4fun/ProjectImages/data_flow_chart.JPG)
 
 Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page user interface functionality is powered by JavaScript.
 

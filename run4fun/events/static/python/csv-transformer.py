@@ -2,10 +2,23 @@ import pandas as pd
 from ccodes import CODES, aplha2to3
 import os
 
+'''
+NOTE: 
+* Run this file from the path it is located in order to successful read and write from the static file paths (hard coded)
+* To run file, use virtual project python environment containing pandas 
+  (In Visual Studio Code - Right Click -> Run Code does not work: uses C:/Python311/python.exe)
+* Do not forget to modify file for your needs (file names, function settings, etc.)
+* In my particular case, for example: make sure right virtual environment is activated, move to right folder
+  and use "python" command:
+  >> conda activate cenv
+  >> cd c:/Users/jarno/django_projects/Run4Fun/run4fun/events/static/python
+  >> python csv-transformer.py
+'''
+
 
 # CSV transformer for data from Königsschlösser Marathon, Füssen
 def füssen():
-    print(os.path)
+    #print(os.path)
     data = pd.read_csv('data/raceresults/füs-halfmar-raw.csv', delimiter='\t')
     # Removes decimals from place indicator columns
     data['Platz'] = data['Platz'].astype('int32')
@@ -34,6 +47,14 @@ def füssen():
 
 def helsinki():
     print('Function \'helsinki\' not yet implemented')
+
+def ekb():
+    data = pd.read_csv('data/race_results/ekb-halfmar-raw.csv', delimiter=',')
+    data['First Name'] = data['First Name'] + data['Last Name']
+    data = data.rename(columns={'First Name':'Name'})
+    data = data.drop(columns=['Last Name'])
+    print(data)
+    data.to_csv('data/race_results/ekb-halfmar.csv', sep=',', columns=data.columns, index=False)
 
 # Select functions to run
 helsinki()

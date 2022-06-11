@@ -1,5 +1,5 @@
 # Run4Fun - Result Service
-## Django Web Application for marathon or half marathon events
+## Django Web Application for marathon events
 
 *This project is a university master's degree course work in Development of Web Applications at Ural Federal University, spring 2022*
 

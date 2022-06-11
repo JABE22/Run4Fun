@@ -169,12 +169,66 @@ In this example we consider data transformation to CSV format and will demonstra
 
 ### Acquiring the data
 
+Result page in the event organizer's web page in certain case may look like this. For now, we start by simply copying data from the screen and saving it to the *halbmarathon.csv* file (30 first row for simplicity of the demonstration)
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="800" height="auto">
+
+Pasted raw data in the halbmarathon.csv file will look like this:
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG" width="700" height="auto">
 
 #### Python data parser for particular event organizer
+
+In the half marathon result raw data file above, we were "lucky" and got all the data such that columns are separated by "\t" mark and we are able to use it as a delimiter in our python data parser. CSV Parser will do the following modifications
+* Drops some unwanted data columns
+* Renames some columns to be more descriptive
+* Combines first and last name columns
+* Changes the column order
+* Transforms country codes from aplha2 to alpha3 (e.g., "DE" -> "DEU") format using country codes dictionary from the static database of the application
+* Saves a transformed csv file into the new file which will be compatible with our application's dynamic SQLite database
+
+Data parser code
+
+'''python
+import pandas as pd
+from ccodes import CODES, aplha2to3
+import os
+
+# CSV transformer for data from Königsschlösser Marathon, Füssen
+def füssen():
+    #print(os.path)
+    data = pd.read_csv('data/raceresults/füs-halfmar-raw.csv', delimiter='\t')
+    
+    # Removes decimals from place indicator columns
+    data['Platz'] = data['Platz'].astype('int32')
+    data['M'] = data['M'].fillna(0).astype('int32').astype('str').replace('0','')
+    data['W'] = data['W'].fillna(0).astype('int32').astype('str').replace('0','')
+
+    # Combines first and last names
+    data['Vorname'] = data['Vorname'] + " " + data['Nachname']
+
+    # Renames and drops unused columns from the data
+    data = data.rename(columns={'Vorname':'Name','Nation':'CountryCode','AK':'Category','Netto':'Time'})
+    data = data.drop(columns=['M','W','Nachname','AK-Platz'])
+    print(data.columns)
+
+    # Country code modifications
+    print(data['CountryCode'].unique())
+    data['CountryCode'] = data['CountryCode'].fillna('ukw').apply(lambda x: aplha2to3.get(x))
+    print(data['CountryCode'])
+
+    # Inserts Nation column to achieve compatibility for some specific application
+    nations = data['CountryCode'].apply(lambda x: CODES.get(x))
+    data.insert(3,'Nation',nations)
+    print(data['Nation'])
+
+    # Flip column order of Club and category
+    data = data[['Platz','Nr.','Name','Nation','CountryCode','Verein','Category','Time','Brutto']]
+    print(data.columns)
+    print(data)
+    print(data[data['Platz']==83].CountryCode)
+    data.to_csv('data/raceresults/füs-halfmar.csv', sep=',', columns=data.columns, index=False)
+'''
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG" width="700" height="auto">
 

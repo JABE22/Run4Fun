@@ -175,7 +175,7 @@ Result page in the event organizer's web page in certain case may look like this
 
 Pasted raw data in the halbmarathon.csv file will look like this:
 
-'''csv
+```
 Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
 1.	1.		3429	Christophe	Thill	LU	1.	M35		01:18:26	01:18:27
 2.	2.		3384	Philip	Scholz	DE	1.	M30	SV Mergelstetten	01:19:51	01:19:51
@@ -187,7 +187,7 @@ Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
 8.		1.	3308	Laura	Opt-Eynde	DE	1.	W30	Kimbia Sports	01:26:15	01:26:16
 9.	8.		3369	David	Schmidt	DE	2.	M30	LG Laufarena Allgäu	01:26:47	01:26:48
 10.	9.		3066	Konstantin	Dobroliubov	RU	3.	M30		01:26:56	01:26:58
-'''
+```
 
 ### Python data parser for particular event organizer
 
@@ -266,9 +266,9 @@ The last and easiest step is to upload modified data to the application's databa
 
 Site administration page opened and navigated into the result model
 
-'''
+```
 http://127.0.0.1:8000/admin/events/result/
-'''
+```
 
 ![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
 <img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>

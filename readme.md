@@ -189,7 +189,7 @@ In the half marathon result raw data file above, we were "lucky" and got all the
 
 Data parser code
 
-'''python
+'''py
 import pandas as pd
 from ccodes import CODES, aplha2to3
 import os

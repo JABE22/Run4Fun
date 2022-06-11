@@ -244,9 +244,9 @@ def füssen():
 füssen()
 ```
 
-#### Parsed data in CSV format
+Parsed data in CSV format
 
-'''
+```
 Platz,Nr.,Name,Nation,CountryCode,Verein,Category,Time,Brutto
 1,3429,Christophe Thill,Luxembourg,LUX,,M35,01:18:26,01:18:27
 2,3384,Philip Scholz,Germany,GER,SV Mergelstetten,M30,01:19:51,01:19:51
@@ -258,7 +258,7 @@ Platz,Nr.,Name,Nation,CountryCode,Verein,Category,Time,Brutto
 8,3308,Laura Opt-Eynde,Germany,GER,Kimbia Sports,W30,01:26:15,01:26:16
 9,3369,David Schmidt,Germany,GER,LG Laufarena Allgäu,M30,01:26:47,01:26:48
 10,3066,Konstantin Dobroliubov,Russian Federation,RUS,,M30,01:26:56,01:26:58
-'''
+```
 
 ### Saving transformed data to the database
 
@@ -271,8 +271,19 @@ http://127.0.0.1:8000/admin/events/result/
 ```
 
 ![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
+
+CSV file upload page (no styles)
+
 <img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>
+
+Inserted data in the database
+
 ![admin_results](https://user-images.githubusercontent.com/37688643/173184280-4ac84b2b-d7dd-440b-bd9e-1f6778b0c4b1.JPG)
 
+### Discussion
 
+This solution allows us to insert data without too heavy manual work in acceptable time and effort requirements. Data parser algorithms need continuous support and modifications since any changes may occur in event organizers data (column names etc.). However, once transformed data does not need further re-processing but is valid forever. Events are repetitive and each of them occurs basically once in a year, which means that modifications to the data parsing methods will be needed once in a year at a maximum. But still, the same event (event with same organizer - basically) is considered as a separate event for each year and in that sense their repetitiveness is not meaningful issue.
 
+All the other data of the models (tables) will be inserted manually into the database. For example, *Event* model will be in size of 50-100 new events (rows) inserted annually at the maximum, data feature number is relatively small, and data collected over longer time period. The same statement is valid for *Race* model (one event may contain 1-5 races) as well as for all the other models.
+
+---

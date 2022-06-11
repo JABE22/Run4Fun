@@ -171,6 +171,10 @@ In this example we consider data transformation to CSV format and will demonstra
 
 Result page in the event organizer's web page in certain case may look like this. For now, we start by simply copying data from the screen and saving it to the *halbmarathon-raw.csv* file (10 first rows + header for simplicity of the demonstration)
 
+```
+https://www.davengo.com/event/result/18-koenigsschloesser-romantik-marathon-2018/
+```
+
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="800" height="auto">
 
 Pasted raw data in the halbmarathon.csv file will look like this:

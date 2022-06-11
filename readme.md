@@ -265,11 +265,14 @@ Platz,Nr.,Name,Nation,CountryCode,Verein,Category,Time,Brutto
 The last and easiest step is to upload modified data to the application's database. This will be done using django site administration portal where we have added *upload csv* option to insert data.
 
 Site administration page opened and navigated into the result model
+
 '''
 http://127.0.0.1:8000/admin/events/result/
 '''
-![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
-![admin_upload-csv](https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG)
-![admin_results](https://user-images.githubusercontent.com/37688643/173183994-fbd9f747-90a4-4612-a9d1-5c60a433cb8d.JPG)
 
+![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
 <img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>
+![admin_results](https://user-images.githubusercontent.com/37688643/173184280-4ac84b2b-d7dd-440b-bd9e-1f6778b0c4b1.JPG)
+
+
+

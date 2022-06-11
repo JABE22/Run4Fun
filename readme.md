@@ -157,3 +157,16 @@ Models to handle event details and race results
 Models to handle form data of the site
 
 ![alt db_chart_forms](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/db_forms.JPG)
+
+
+## Usage example for Service Maintenance team
+
+### Introduction
+
+Service maintenace means in this context partly also coding and site back-end development. As mentioned, web application requires data collection from the event organizers. That means cooperation and communication with sport club representatives. Data will be received in any format, according to sport club's own or outsourced service.
+
+In this example we consider data transformation to CSV format and will demonstrate how that data will be saved to the web application's database. This kind of procedure is a prerequisite during the deployment phase of the service. Service's development team strive to automize this procedure in the future.
+
+### Acquiring the data
+
+

@@ -272,13 +272,17 @@ http://127.0.0.1:8000/admin/events/result/
 
 ![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
 
-CSV file upload page (no styles)
+CSV file upload page (no styles). 
+
+There is a race code dropdown datafield which is used to specify for which race the results will be added. This race code will be set as a foreign key attribute in the result model. The absolute prerequisites are that the race for the results exist before uploading new csv file. For now, mistake will be done very easily since result data will be added to a wrong event, and if that happens data have to be removed manually using Django administration UI functionalities.
 
 <img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>
 
-Inserted data in the database
+Successfully inserted data in the database
 
 ![admin_results](https://user-images.githubusercontent.com/37688643/173184280-4ac84b2b-d7dd-440b-bd9e-1f6778b0c4b1.JPG)
+
+---
 
 ### Discussion
 

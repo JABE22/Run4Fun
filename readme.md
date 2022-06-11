@@ -169,15 +169,27 @@ In this example we consider data transformation to CSV format and will demonstra
 
 ### Acquiring the data
 
-Result page in the event organizer's web page in certain case may look like this. For now, we start by simply copying data from the screen and saving it to the *halbmarathon.csv* file (30 first row for simplicity of the demonstration)
+Result page in the event organizer's web page in certain case may look like this. For now, we start by simply copying data from the screen and saving it to the *halbmarathon-raw.csv* file (10 first rows + header for simplicity of the demonstration)
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="800" height="auto">
 
 Pasted raw data in the halbmarathon.csv file will look like this:
 
-<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG" width="700" height="auto">
+'''
+Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
+1.	1.		3429	Christophe	Thill	LU	1.	M35		01:18:26	01:18:27
+2.	2.		3384	Philip	Scholz	DE	1.	M30	SV Mergelstetten	01:19:51	01:19:51
+3.	3.		3536	Marc	Schmidt	DE	1.	M50	TSV - Betzigau	01:20:38	01:20:39
+4.	4.		3251	Erich	Lantschner	IT	1.	M40	Läuferclub Kaltern	01:21:21	01:21:23
+5.	5.		3527	Robert	Götz	DE	2.	M40	K.V. Ronspitzler	01:22:38	01:22:39
+6.	6.		3446	Stefan	Vogler	AT	1.	M20		01:25:34	01:25:34
+7.	7.		3409	Oumar	Sow	SL	2.	M20	TSG Füssen	01:26:05	01:26:06
+8.		1.	3308	Laura	Opt-Eynde	DE	1.	W30	Kimbia Sports	01:26:15	01:26:16
+9.	8.		3369	David	Schmidt	DE	2.	M30	LG Laufarena Allgäu	01:26:47	01:26:48
+10.	9.		3066	Konstantin	Dobroliubov	RU	3.	M30		01:26:56	01:26:58
+'''
 
-#### Python data parser for particular event organizer
+### Python data parser for particular event organizer
 
 In the half marathon result raw data file above, we were "lucky" and got all the data such that columns are separated by "\t" mark and we are able to use it as a delimiter in our python data parser. CSV Parser will do the following modifications
 * Drops some unwanted data columns
@@ -187,7 +199,7 @@ In the half marathon result raw data file above, we were "lucky" and got all the
 * Transforms country codes from aplha2 to alpha3 (e.g., "DE" -> "DEU") format using country codes dictionary from the static database of the application
 * Saves a transformed csv file into the new file which will be compatible with our application's dynamic SQLite database
 
-Data parser code
+#### Data parser code
 
 ```python
 import pandas as pd
@@ -197,7 +209,7 @@ import os
 # CSV transformer for data from Königsschlösser Marathon, Füssen
 def füssen():
     #print(os.path)
-    data = pd.read_csv('data/raceresults/füs-halfmar-raw.csv', delimiter='\t')
+    data = pd.read_csv('data/raceresults/halbmarathon-raw.csv', delimiter='\t')
     
     # Removes decimals from place indicator columns
     data['Platz'] = data['Platz'].astype('int32')
@@ -227,11 +239,37 @@ def füssen():
     print(data.columns)
     print(data)
     print(data[data['Platz']==83].CountryCode)
-    data.to_csv('data/raceresults/füs-halfmar.csv', sep=',', columns=data.columns, index=False)
+    data.to_csv('data/raceresults/halbmarathon.csv', sep=',', columns=data.columns, index=False)
+
+füssen()
 ```
 
-<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG" width="700" height="auto">
+#### Parsed data in CSV format
 
-Parsed data in CSV format
+'''
+Platz,Nr.,Name,Nation,CountryCode,Verein,Category,Time,Brutto
+1,3429,Christophe Thill,Luxembourg,LUX,,M35,01:18:26,01:18:27
+2,3384,Philip Scholz,Germany,GER,SV Mergelstetten,M30,01:19:51,01:19:51
+3,3536,Marc Schmidt,Germany,GER,TSV - Betzigau,M50,01:20:38,01:20:39
+4,3251,Erich Lantschner,Italy,ITA,Läuferclub Kaltern,M40,01:21:21,01:21:23
+5,3527,Robert Götz,Germany,GER,K.V. Ronspitzler,M40,01:22:38,01:22:39
+6,3446,Stefan Vogler,Austria,AUT,,M20,01:25:34,01:25:34
+7,3409,Oumar Sow,Sierra Leone,SLE,TSG Füssen,M20,01:26:05,01:26:06
+8,3308,Laura Opt-Eynde,Germany,GER,Kimbia Sports,W30,01:26:15,01:26:16
+9,3369,David Schmidt,Germany,GER,LG Laufarena Allgäu,M30,01:26:47,01:26:48
+10,3066,Konstantin Dobroliubov,Russian Federation,RUS,,M30,01:26:56,01:26:58
+'''
 
-<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse-parsed.JPG" width="700" height="auto">
+### Saving transformed data to the database
+
+The last and easiest step is to upload modified data to the application's database. This will be done using django site administration portal where we have added *upload csv* option to insert data.
+
+Site administration page opened and navigated into the result model
+'''
+http://127.0.0.1:8000/admin/events/result/
+'''
+![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
+![admin_upload-csv](https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG)
+![admin_results](https://user-images.githubusercontent.com/37688643/173183994-fbd9f747-90a4-4612-a9d1-5c60a433cb8d.JPG)
+
+<img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>

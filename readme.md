@@ -169,13 +169,15 @@ In this example we consider data transformation to CSV format and will demonstra
 
 ### Acquiring the data
 
-![halbmarathon](run4fun/ProjectImages/data-import-dem/halbmarathon.JPG)
-![halbmarathon-ergebnisse](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG)
+
+<img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="100" height="100">
+
+<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG" width="700" height="auto">
 
 #### Python data parser for particular event organizer
 
-![halbmarathon-dataparser](run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG)
+<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG" width="700" height="auto">
 
 Parsed data in CSV format
 
-![halbmarathon-ergebnisse-parsed](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse-parsed.JPG)
+<img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse-parsed.JPG" width="700" height="auto">

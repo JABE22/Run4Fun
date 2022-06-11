@@ -170,7 +170,7 @@ In this example we consider data transformation to CSV format and will demonstra
 ### Acquiring the data
 
 
-<img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG">
+<img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="600" height="auto">
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG" width="700" height="auto">
 

@@ -37,13 +37,15 @@ This project does not contain Python environment files. In order to run program 
 
 Web application is developed using Python conda (4.13.0)
 
-## Data flow diagram and main ideology
+---
+
+## 1 Data flow diagram and main ideology
 
 Following diagram describes how the project data structure is implemented.
 
 ![alt data_flow_diagram](run4fun/ProjectImages/data_flow_chart.jpg)
 
-### Brief explanation of the main concepts of the chart
+### 1.1 Brief explanation of the main concepts of the chart
 
 Front-end technologies are HTML, CSS and JavaScript. JavaScript is used for reading data from static text and JSON files asyncronously and to build web page content by creating HTML DOM Elements (Nodes). Web page UI functionality is powered by JavaScript.
 
@@ -51,15 +53,17 @@ Back-end works within Python Django framework to read and write into the databas
 
 In the chart, site management area means service maintenance and part of manual work, in which Run4Fun company representative requests (cooperates event organizer IT team) and receive possible race result data from them. After having access to data, he writes the python scripts in order to transform received data into a suitable format to store it to the Run4Fun web application database.
 
-### About the business idea of the service
+### 1.2 About the business idea of the service
 
 For end users (athletes and their coaches, their families and friends) site is planned to be free of charge and read only type (in launch version), except contact form. In later versions, private functionalities for athletes will be added behind user authentication and then customized content will be added to the site (user statistics etc.). At that point, paid content may become a thing to discuss and situation evaluated according to the market.
 
 Business idea covers customers motivation to pay for a service where their events are advertised and event race results accessible via modern and prominent web page for their participants. Idea is to build a website which will be marketed via running event organizers or sport clubs itself and that is possible if it produces added value. Also, one of the greatest motivation is to unite databases between running event organizers from all over world and put the data into the same place.
 
-## Web Application UI introduction
+---
 
-### Website visitor and customer pages
+## 2 Web Application UI introduction
+
+### 2.1 Website visitor and customer pages
 
 **Home**
 
@@ -131,7 +135,9 @@ Simple login form with django built-in backend solution. Successful login enable
 
 ![alt login](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Login.JPG)
 
-### Project admin pages
+
+
+### 2.2 Project admin pages
 
 Admin portal is basically default django user interface. Following images demonstrates how to insert data from csv file to the database. Database management, which consists of inserting marathons event details, is manual human made work since it does not require remarkable effort. However, single races may contain thousands of items and that data must be transformed programmatically. For that purpose csv file upload option is inserted to the default model page.
 
@@ -147,8 +153,9 @@ Admin portal is basically default django user interface. Following images demons
 
 ![alt admin_upload-csv](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/Admin_upload-csv.JPG)
 
+---
 
-## Database design
+## 3 Database design
 
 Models to handle event details and race results
 
@@ -158,16 +165,17 @@ Models to handle form data of the site
 
 ![alt db_chart_forms](https://raw.githubusercontent.com/JABE22/Run4Fun/master/run4fun/ProjectImages/db_forms.JPG)
 
+---
 
-## Usage example for Service Maintenance team
+## 4 Usage example for the *service maintenance* team
 
-### Introduction
+### 4.1 Introduction
 
 Service maintenace means in this context partly also coding and site back-end development. As mentioned, web application requires data collection from the event organizers. That means cooperation and communication with sport club representatives. Data will be received in any format, according to sport club's own or outsourced service.
 
 In this example we consider data transformation to CSV format and will demonstrate how that data will be saved to the web application's database. This kind of procedure is a prerequisite during the deployment phase of the service. Service's development team strive to automize this procedure in the future.
 
-### Acquiring the data
+### 4.2 Acquiring the data
 
 Result page in the event organizer's web page in certain case may look like this. For now, we start by simply copying data from the screen and saving it to the *halbmarathon-raw.csv* file (10 first rows + header for simplicity of the demonstration)
 
@@ -193,7 +201,7 @@ Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
 10.	9.		3066	Konstantin	Dobroliubov	RU	3.	M30		01:26:56	01:26:58
 ```
 
-### Python data parser for particular event organizer
+### 4.3 Python data parser for particular event organizer
 
 In the half marathon result raw data file above, we were "lucky" and got all the data such that columns are separated by "\t" mark and we are able to use it as a delimiter in our python data parser. CSV Parser will do the following modifications
 * Drops some unwanted data columns
@@ -203,7 +211,7 @@ In the half marathon result raw data file above, we were "lucky" and got all the
 * Transforms country codes from aplha2 to alpha3 (e.g., "DE" -> "DEU") format using country codes dictionary from the static database of the application
 * Saves a transformed csv file into the new file which will be compatible with our application's dynamic SQLite database
 
-#### Data parser code
+**Data parser code**
 
 ```python
 import pandas as pd
@@ -264,11 +272,11 @@ Platz,Nr.,Name,Nation,CountryCode,Verein,Category,Time,Brutto
 10,3066,Konstantin Dobroliubov,Russian Federation,RUS,,M30,01:26:56,01:26:58
 ```
 
-### Saving transformed data to the database
+### 4.4 Saving transformed data to the database
 
 The last and easiest step is to upload modified data to the application's database. This will be done using django site administration portal where we have added *upload csv* option to insert data.
 
-Site administration page opened and navigated into the result model
+**Site administration page opened and navigated into the result model**
 
 ```
 http://127.0.0.1:8000/admin/events/result/
@@ -276,19 +284,18 @@ http://127.0.0.1:8000/admin/events/result/
 
 ![admin_results_before-m](https://user-images.githubusercontent.com/37688643/173184204-1bba5b84-19b5-4340-aa06-159e68fbfcf9.jpg)
 
-CSV file upload page (no styles). 
+**CSV file upload page (no styles)** 
 
 There is a race code dropdown datafield which is used to specify for which race the results will be added. This race code will be set as a foreign key attribute in the result model. The absolute prerequisites are that the race for the results exist before uploading new csv file. For now, mistake will be done very easily since result data will be added to a wrong event, and if that happens data have to be removed manually using Django administration UI functionalities.
 
 <img src=https://user-images.githubusercontent.com/37688643/173183998-0e8d3eff-abe5-4f7e-bfd4-953ef24e132a.JPG width=300>
 
-Successfully inserted data in the database
+**Successfully inserted data in the database**
 
 ![admin_results](https://user-images.githubusercontent.com/37688643/173184280-4ac84b2b-d7dd-440b-bd9e-1f6778b0c4b1.JPG)
 
----
 
-### Discussion
+### 4.5 Discussion
 
 This solution allows us to insert data without too heavy manual work in acceptable time and effort requirements. Data parser algorithms need continuous support and modifications since any changes may occur in event organizers data (column names etc.). However, once transformed data does not need further re-processing but is valid forever. Events are repetitive and each of them occurs basically once in a year, which means that modifications to the data parsing methods will be needed once in a year at a maximum. But still, the same event (event with same organizer - basically) is considered as a separate event for each year and in that sense their repetitiveness is not meaningful issue.
 

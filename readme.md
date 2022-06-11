@@ -189,13 +189,14 @@ In the half marathon result raw data file above, we were "lucky" and got all the
 
 Data parser code
 
-´´´python
-
+```python
 import pandas as pd
 from ccodes import CODES, aplha2to3
 import os
+```
 
-# CSV transformer for data from Königsschlösser Marathon, Füssen
+'''
+    # CSV transformer for data from Königsschlösser Marathon, Füssen
 def füssen():
     #print(os.path)
     data = pd.read_csv('data/raceresults/füs-halfmar-raw.csv', delimiter='\t')
@@ -229,7 +230,7 @@ def füssen():
     print(data)
     print(data[data['Platz']==83].CountryCode)
     data.to_csv('data/raceresults/füs-halfmar.csv', sep=',', columns=data.columns, index=False)
-´´´
+'''
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG" width="700" height="auto">
 

@@ -175,7 +175,7 @@ Result page in the event organizer's web page in certain case may look like this
 
 Pasted raw data in the halbmarathon.csv file will look like this:
 
-'''
+'''csv
 Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
 1.	1.		3429	Christophe	Thill	LU	1.	M35		01:18:26	01:18:27
 2.	2.		3384	Philip	Scholz	DE	1.	M30	SV Mergelstetten	01:19:51	01:19:51

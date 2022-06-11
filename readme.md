@@ -169,14 +169,13 @@ In this example we consider data transformation to CSV format and will demonstra
 
 ### Acquiring the data
 
-![alt text](run4fun/ProjectImages/data-import-dem/halbmarathon.JPG)
-![alt text](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG)
-![halbmarathon](https://user-images.githubusercontent.com/37688643/173182385-f2385bca-a5f4-4f2d-aca2-c045b0a0e39e.JPG | width=300)
+![halbmarathon](run4fun/ProjectImages/data-import-dem/halbmarathon.JPG)
+![halbmarathon-ergebnisse](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse.JPG)
 
 #### Python data parser for particular event organizer
 
-![alt text](run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG)
+![halbmarathon-dataparser](run4fun/ProjectImages/data-import-dem/halbmarathon-dataparser.JPG)
 
 Parsed data in CSV format
 
-![alt text](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse-parsed.JPG)
+![halbmarathon-ergebnisse-parsed](run4fun/ProjectImages/data-import-dem/halbmarathon-ergebnisse-parsed.JPG)

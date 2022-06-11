@@ -185,7 +185,7 @@ https://www.davengo.com/event/result/18-koenigsschloesser-romantik-marathon-2018
 
 <img src="run4fun/ProjectImages/data-import-dem/halbmarathon.JPG" width="800" height="auto">
 
-Pasted raw data in the halbmarathon.csv file will look like this:
+Pasted raw data in the *halbmarathon-raw.csv* file will look like this:
 
 ```
 Platz	M	W	Nr.	Vorname	Nachname	Nation	AK-Platz	AK	Verein	Netto	Brutto
